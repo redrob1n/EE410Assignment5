@@ -57,6 +57,4 @@ float force;
 
 float wanderHeading;
 
-int suppressionNode;
-
 #endif /* _GLOBALS_H */

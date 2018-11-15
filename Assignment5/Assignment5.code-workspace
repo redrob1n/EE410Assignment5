@@ -3,5 +3,12 @@
 		{
 			"path": "."
 		}
-	]
+	],
+	"settings": {
+		"arduino.path": "C:\\Program Files (x86)\\Arduino",
+		"arduino.additionalUrls": "",
+		"arduino.logLevel": "info",
+		"arduino.enableUSBDetection": true,
+		"C_Cpp.intelliSenseEngine": "Tag Parser",		
+	}
 }

@@ -14,8 +14,8 @@ void motor_init()
     pinMode(rightPWM_Pin, OUTPUT);
 
     //initialize motor speeds to equal values
-    leftDutyCyclePercent = 25;
-    rightDutyCyclePercent = 25;
+    leftDutyCyclePercent = 42;
+    rightDutyCyclePercent = 50;
     leftDutyCycle = leftDutyCyclePercent * 255 / 100;
     rightDutyCycle = rightDutyCyclePercent * 255 / 100;
 
@@ -44,6 +44,18 @@ void setMotorSpeeds(int dutyCyclePercent)
 {
     leftDutyCycle = dutyCyclePercent * 255 / 100;
     rightDutyCycle = dutyCyclePercent * 255 / 100;
+}
+
+void setSingleMotorSpeed(int dutyCyclePercent, bool isRightMotor)
+{
+    if(isRightMotor)
+    {
+        rightDutyCycle = dutyCyclePercent * 255 / 100;        
+    }
+    else
+    {
+        leftDutyCycle = dutyCyclePercent * 255 / 100;
+    }
 }
 
 void writeMotorSpeeds()
